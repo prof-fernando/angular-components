@@ -1,0 +1,10 @@
+.navigator {
+  background-color: #ccc;
+  padding: 1em 0px;
+  display: flex;
+  justify-content: space-around;
+  a {
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
