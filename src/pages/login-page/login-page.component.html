@@ -1,1 +1,17 @@
 <app-nav></app-nav>
+
+<div class="login">
+  <form [formGroup]="loginForm">
+    <input formControlName="email" type="text" />
+    <div *ngIf="loginForm.dirty">
+      <span *ngIf="loginForm.get('email')?.hasError('required')"
+        >Campo obrigatório!</span
+      >
+      <span *ngIf="loginForm.get('email')?.hasError('email')"
+        >Formato de email inválido!</span
+      >
+    </div>
+    <input formControlName="senha" type="password" />
+    <button (click)="autenticar()">Entrar</button>
+  </form>
+</div>
